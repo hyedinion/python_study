@@ -18,6 +18,7 @@ def find_path(queue, checkList, ordict):
                 if checkList[ordict[n]] == False:
                     failList.append(n)
                     continue
+            #조건이 만족 되었을 때
             checkList[n]=True
             change = True
                 

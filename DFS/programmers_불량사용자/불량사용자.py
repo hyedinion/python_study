@@ -19,16 +19,11 @@ def find_id(length,b,lis):
 
 def find_comb(idx,banList,dic):
     global answerList
-    #idx의 크기가 banList의 크기일 때
     if idx == len(banList):
-        #키의 갯수가 banList만큼 있는지 확인
         if len(dic.keys())==idx:
-            #answerList에 없으면 append
             if dic not in answerList:
                 answerList.append(copy.deepcopy(dic))
         return
-
-    # idx에 해당하는 banList를 다 방문
     for l in banList[idx]:
         if l in dic.keys():
             dic[l]+=1

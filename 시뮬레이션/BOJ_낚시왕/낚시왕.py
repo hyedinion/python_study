@@ -60,7 +60,6 @@ R,C,M = map(int,sys.stdin.readline().split())
 shark = dict()
 for i in range(M):
     shark[i] = list(map(int,sys.stdin.readline().split()))
-print(shark)
 direction = [[0,0],[-1,0],[1,0],[0,1],[0,-1]]
 for k,s in shark.items():
     if s[3]<3:
