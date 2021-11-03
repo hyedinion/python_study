@@ -19,7 +19,6 @@ def check_pre(t):
     return [True,time]
 
 def build_tower(t):
-    time = 0
     I = t[2]
     temp = check_pre(t)
     if not temp[0]:
