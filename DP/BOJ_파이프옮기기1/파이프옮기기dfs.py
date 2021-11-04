@@ -11,7 +11,8 @@ def canGo (x,y):
             return True
     return False
 
-def check_margin(x1,y1,x2,y2):
+def check_margin(newD):
+    x1,y1,x2,y2 = newD
     if not canGo(x1,y1) or not canGo(x2,y2):
         return False
     for x in range(x1,x2+1):
@@ -24,12 +25,12 @@ def dfs(pipe):
     global answer
     direction = pipe[1]
     for m in move[direction]:
-        new1x,new1y,new2x,new2y = [ x+y for x,y in zip(pipe[0],m[0])]
-        if check_margin(new1x,new1y,new2x,new2y):
-            if (new1x==N-1 and new1y==N-1) or (new2x==N-1 and new2y==N-1):
+        newD = [ x+y for x,y in zip(pipe[0],m[0])]
+        if check_margin(newD):
+            if (newD[2]==N-1 and newD[3]==N-1):
                 answer+=1
                 return
-            dfs([[new1x,new1y,new2x,new2y],m[1]])
+            dfs([newD,m[1]])
 
 dfs(pipe)
 print(answer)
