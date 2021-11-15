@@ -36,4 +36,4 @@ def solution(arr):
             answer*=k**v
     return answer
 
-print(solution([2,6,8,14]))
+print(solution([12,18,2,24,3]))
