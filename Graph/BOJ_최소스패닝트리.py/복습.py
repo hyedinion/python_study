@@ -1,19 +1,27 @@
 V,E = map(int,input().split())
-edge = []
+edge=[]
+parent={}
+rank={}
+for i in range(1,V+1):
+    parent[i]=i
+    rank[i]=0
+
 for i in range(E):
     A,B,C = map(int,input().split())
     edge.append([C,A,B])
 edge.sort()
 
-parent = {}
-rank = {}
-for i in range(V):
-    parent[i+1] = i+1
-    rank[i+1] = 0
+def kruskal(edge):
+    total_sum = 0
+    for e in edge:
+        c,a,b = e
+        if union(a,b):
+            total_sum+=c
+    return total_sum
 
 def union(a,b):
-    x = find(a)
-    y = find(b)
+    x =  find(a)
+    y =  find(b)
     if x==y:
         return False
     if rank[x]>rank[y]:
@@ -30,13 +38,4 @@ def find(i):
     else:
         return find(parent[i])
 
-def kruskal(edge):
-    weight_sum = 0
-    for e in edge:
-        w,a,b = e
-        if union(a,b):
-            weight_sum+=w
-    print(weight_sum)
-    return
-
-kruskal(edge)
+print(kruskal(edge))
