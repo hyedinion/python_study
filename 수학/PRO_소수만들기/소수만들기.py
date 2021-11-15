@@ -14,7 +14,7 @@ def solution(nums):
     prime = primeSeive(3000)
     comb = list(combinations(nums,3))
     for c in comb:
-        if not prime[sum(c)]:
+        if prime[sum(c)]:
             answer+=1
     return answer
 
