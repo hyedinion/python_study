@@ -7,10 +7,8 @@ def primeSieve(n):
             while i<=n:
                 prime[i]=False
                 i+=p
-    for i,p in enumerate(prime):
-        if i<2:
-            continue
-        if p:
+    for i in range(2,N+1):
+        if prime[i]:
             nlist.append(i)
     return nlist
 
