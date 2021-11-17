@@ -2,14 +2,14 @@ import sys
 input = sys.stdin.readline
 
 N,M = map(int,input().split())
-S = {}
+Sdict = {}
 for i in range(N):
-    S[input()[:-1]] = True
+    Sdict[input()[:-1]] = True
 temp = [input()[:-1] for _ in range(M)]
 answer = 0
 
 for i in temp:
-    if i in S.keys():
+    if i in Sdict.keys():
         answer+=1
 
 print(answer)
