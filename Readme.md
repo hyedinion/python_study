@@ -356,11 +356,11 @@
 
     - dict형
     - 각 key값이 몇번 나왔는지 cnt를 value로 함
+    - 생성시 시간복잡도 O(n)
     ```python
     from collections import Counter
     Counter("hello")
     #{'h':1,'e':1,'l':2,'o':1}
-
     ```
     </details>
 </detail>
