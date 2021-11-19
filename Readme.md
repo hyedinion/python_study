@@ -303,6 +303,9 @@
         heapq.heappush(lst, value)
         heapq.heappop(lst)
     ```
+    - 시간복잡도
+     - heapify O(N) -> 정렬후 pop해서 참조할 경우 유리,index로 참조불가능
+     - list.sort() O(NlogN) -> 정렬후 index로 참조가능
     </details>
 
 - <details>
