@@ -20,6 +20,20 @@
 
 
 <details>
+    <summary>시간복잡도</summary>
+    <details>
+        <summary>len()</summary>
+        리스트의 len()함수가 O(1)인 이유
+        Python에서 전체 요소의 개수를 리턴하는 len() 함수는 O(1)의 시간 복잡도를 가진다.
+        어떻게 O(1)의 시간 복잡도를 가질 수 있었을까?
+        len()은 __len__()을 호출한다.
+        __len__()은 특별 메소드로 카운터로 작동하며 데이터가 정의되고 저장되면 자동적으로 증가한다.
+        결과적으로 인터프리터에게 순회하며 길이를 가져오라는 명령대신 이미 저장된 value를 가져오게 된다.
+        이렇게 len()은 O(1)의 시간 복잡도를 가지게 되었다
+    </details>
+</details>
+
+<details>
     <summary>자료구조</summary>
 
 - <details>
